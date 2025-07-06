@@ -1,31 +1,108 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Arthur Practice Areas</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>Arthur – Practice Areas</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f8f9fa;
+      color: #2b2b2b;
+    }
+
+    header {
+      background: #1f3a93;
+      color: #fff;
+      padding: 3em 1em 2em;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      letter-spacing: 0.5px;
+    }
+
+    header p {
+      margin-top: 0.5em;
+      font-size: 1.1rem;
+      font-weight: 300;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      padding: 3em 2em;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .card {
+      background: #fff;
+      border-left: 5px solid #bfa134;
+      padding: 1.5rem 1.5rem 1.75rem;
+      border-radius: 6px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+    }
+
+    .icon {
+      font-size: 2rem;
+      color: #1f3a93;
+      margin-bottom: 0.8rem;
+    }
+
+    .card h3 {
+      margin: 0 0 0.5rem;
+      font-size: 1.25rem;
+      color: #1f3a93;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      line-height: 1.5;
+      color: #444;
+    }
+
+    footer {
+      text-align: center;
+      background: #1f3a93;
+      color: white;
+      font-size: 0.9rem;
+      padding: 1.2em 0;
+      margin-top: 3em;
+    }
+  </style>
 </head>
 <body>
+
   <header>
     <h1>Arthur – Practice Areas</h1>
     <p>Discover our core legal specializations</p>
   </header>
 
   <div class="container">
-    <div class="card"><div class="icon">💼</div><h3>Capital Markets</h3><p>Guiding businesses in securities, listings and Investor Protection.</p></div>
-    <div class="card"><div class="icon">🤝</div><h3>Mergers & Acquisitions</h3><p>Strategic support through all phases of business mergers, asset transfers, and corporate restructuring.</p></div>
-    <div class="card"><div class="icon">🚀</div><h3>Private Equity & Venture Capital</h3><p>Expertise in structuring deals, financing rounds, and equity strategies for startups and investors.</p></div>
-    <div class="card"><div class="icon">🧠</div><h3>Artificial Intelligence & Technology</h3><p>Advising on tech law, data protection, intellectual property, and AI ethics frameworks.</p></div>
-    <div class="card"><div class="icon">⚡</div><h3>Energy & Natural Resources</h3><p>Legal counsel in oil, gas, power generation, mining, and sustainable energy projects.</p></div>
-    <div class="card"><div class="icon">🌱</div><h3>ESG & Governance</h3><p>Supporting environmental, social, and governance standards for corporate responsibility and transparency.</p></div>
-    <div class="card"><div class="icon">🏛️</div><h3>Corporate Law</h3><p>Comprehensive legal support for company formation, governance, compliance, and shareholder relations.</p></div>
-    <div class="card"><div class="icon">🏗️</div><h3>Construction Law</h3><p>Legal expertise in construction contracts, regulatory compliance, dispute resolution, and infrastructure development.</p></div>
+    <div class="card"><div class="icon">💼</div><h3>Capital Markets</h3><p>Guiding businesses in securities, listings, and investor protection.</p></div>
+    <div class="card"><div class="icon">🤝</div><h3>Mergers & Acquisitions</h3><p>Strategic support through all phases of business transitions and restructuring.</p></div>
+    <div class="card"><div class="icon">🚀</div><h3>Private Equity & Venture Capital</h3><p>Structuring investments and scaling ventures with legal precision.</p></div>
+    <div class="card"><div class="icon">🧠</div><h3>Artificial Intelligence & Technology</h3><p>Advising on data privacy, IP law, and AI regulatory frameworks.</p></div>
+    <div class="card"><div class="icon">⚡</div><h3>Energy & Natural Resources</h3><p>Counsel for oil, gas, mining, renewables, and sustainable development.</p></div>
+    <div class="card"><div class="icon">🌱</div><h3>ESG & Governance</h3><p>Advising on ethical governance and sustainable business practices.</p></div>
+    <div class="card"><div class="icon">🏛️</div><h3>Corporate Law</h3><p>Comprehensive legal support for company formation, compliance, and operations.</p></div>
+    <div class="card"><div class="icon">🏗️</div><h3>Construction Law</h3><p>Contracts, regulatory issues, and infrastructure development advisory.</p></div>
   </div>
 
   <footer>
-    &copy; 2025 CSL Arthur.com
+    &copy; 2025 CSL Arthur.com – All Rights Reserved
   </footer>
+
 </body>
 </html>
