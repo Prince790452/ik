@@ -60,7 +60,6 @@
       box-shadow: 0 2px 8px rgba(0,0,0,0.08);
       text-align: center;
       transition: transform 0.3s ease;
-      cursor: pointer;
     }
 
     .card:hover {
@@ -76,6 +75,22 @@
       margin: 0.5em 0 0.2em;
       font-size: 1.3rem;
       color: #1f3a93;
+    }
+
+    .card button {
+      margin-top: 1em;
+      padding: 0.6em 1.2em;
+      background-color: #0074D9;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .card button:hover {
+      background-color: #005fa3;
     }
 
     .insight {
@@ -151,10 +166,11 @@
     <p>Click below to explore insight on Capital Markets</p>
   </header>
 
-  <div class="card" onclick="toggleInsight()">
+  <div class="card">
     <div class="icon">💼</div>
     <h3>Capital Markets</h3>
     <p>Guiding businesses in securities, listings, and investor protection.</p>
+    <button id="insightBtn">Read Insight</button>
   </div>
 
   <div class="insight" id="capital-insight">
@@ -231,15 +247,4 @@
   </div>
 
   <footer>
-    &copy; 2025 CSL Arthur | Insight authored by Counsel Baluti Bwanika Arthur
-  </footer>
-
-  <script>
-    function toggleInsight() {
-      const section = document.getElementById('capital-insight');
-      section.classList.toggle('show');
-    }
-  </script>
-
-</body>
-</html>
+    &copy; 2025 CSL Arthur | Insight authored by Counsel Baluti Bwan
