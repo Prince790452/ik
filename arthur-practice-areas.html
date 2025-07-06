@@ -31,6 +31,22 @@
       font-weight: 300;
     }
 
+    .return-button {
+      display: inline-block;
+      margin: 1.5em auto 0;
+      padding: 10px 20px;
+      background-color: #1f3a93;
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+      font-size: 1rem;
+      transition: background 0.3s ease;
+    }
+
+    .return-button:hover {
+      background-color: #16307a;
+    }
+
     .container {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -78,7 +94,6 @@
       color: white;
       font-size: 0.9rem;
       padding: 1.2em 0;
-      margin-top: 3em;
     }
   </style>
 </head>
@@ -88,6 +103,10 @@
     <h1>Arthur – Practice Areas</h1>
     <p>Discover our core legal specializations</p>
   </header>
+
+  <div style="text-align: center;">
+    <a href="index.html" class="return-button">← Return to Home</a>
+  </div>
 
   <div class="container">
     <div class="card"><div class="icon">💼</div><h3>Capital Markets</h3><p>Guiding businesses in securities, listings, and investor protection.</p></div>
