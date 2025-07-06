@@ -8,7 +8,6 @@
     html {
       scroll-behavior: smooth;
     }
-
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
@@ -16,67 +15,37 @@
       color: #222;
       line-height: 1.7;
     }
-
-    .back-arrow {
-      position: absolute;
-      top: 1.2em;
-      left: 1.2em;
-      font-size: 2rem;
-      text-decoration: none;
-      color: gold;
-      font-weight: bold;
-      z-index: 1000;
-      transition: color 0.3s ease;
-    }
-
-    .back-arrow:hover {
-      color: goldenrod;
-    }
-
     header {
       background-color: #001F3F;
       color: white;
       text-align: center;
       padding: 2.5em 1em 2em;
-      position: relative;
     }
-
     header h1 {
       font-size: 2.2rem;
       margin-bottom: 0.2em;
     }
-
     header p {
       font-style: italic;
       font-size: 1.1rem;
     }
-
     .card {
       max-width: 340px;
-      margin: 2em auto 0.5em;
+      margin: 2em auto;
       padding: 1.5em;
       background-color: white;
       border-radius: 8px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.08);
       text-align: center;
-      transition: transform 0.3s ease;
     }
-
-    .card:hover {
-      transform: translateY(-5px);
-    }
-
     .icon {
       font-size: 3rem;
       color: #0074D9;
     }
-
     .card h3 {
-      margin: 0.5em 0 0.2em;
       font-size: 1.3rem;
       color: #1f3a93;
     }
-
     .card button {
       margin-top: 1em;
       padding: 0.6em 1.2em;
@@ -88,50 +57,43 @@
       cursor: pointer;
       transition: background-color 0.3s ease;
     }
-
     .card button:hover {
       background-color: #005fa3;
     }
-
     .insight {
       max-width: 960px;
       margin: 0 auto;
       background: #ffffff;
       border-left: 5px solid #0074D9;
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-      overflow: hidden;
-      max-height: 0;
-      opacity: 0;
-      transition: all 0.7s ease;
       padding: 0 1.5em;
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
       visibility: hidden;
+      transition: all 0.6s ease;
     }
-
     .insight.show {
-      max-height: 5000px;
       opacity: 1;
+      max-height: 5000px;
       visibility: visible;
       padding: 2em 1.5em;
-      margin-bottom: 3em;
+      margin-top: 2em;
     }
-
     .insight h2 {
       color: #003366;
       font-size: 1.5rem;
       margin-top: 1.2em;
     }
-
     .insight h3 {
       font-size: 1.15rem;
       margin-bottom: 0.4em;
       color: #004080;
     }
-
     .insight ul {
       margin-left: 1.5em;
       margin-bottom: 1.5em;
     }
-
     .insight blockquote {
       border-left: 4px solid #0074D9;
       padding-left: 1em;
@@ -139,16 +101,13 @@
       font-style: italic;
       margin: 1.5em 0;
     }
-
     .insight a {
       color: #0074D9;
       text-decoration: none;
     }
-
     .insight a:hover {
       text-decoration: underline;
     }
-
     footer {
       text-align: center;
       padding: 2em 1em;
@@ -161,7 +120,6 @@
 <body>
 
   <header>
-    <a class="back-arrow" href="javascript:history.back()">←</a>
     <h1>CSL Arthur – Practice Areas</h1>
     <p>Click below to explore insight on Capital Markets</p>
   </header>
@@ -239,4 +197,30 @@
 
     <h3>📚 References</h3>
     <ul>
-      <li><a href="https://cmauganda.co.ug" target="_blank">
+      <li><a href="https://cmauganda.co.ug" target="_blank">Capital Markets Authority Uganda</a></li>
+      <li><a href="https://www.use.or.ug" target="_blank">Uganda Securities Exchange</a></li>
+      <li><a href="https://fsdafrica.org" target="_blank">FSD Africa</a></li>
+      <li><a href="https://www.worldbank.org" target="_blank">World Bank: Capital Market Development</a></li>
+    </ul>
+  </div>
+
+  <footer>
+    &copy; 2025 CSL Arthur | Insight authored by Counsel Baluti Bwanika Arthur
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const btn = document.getElementById("insightBtn");
+      const insight = document.getElementById("capital-insight");
+
+      btn.addEventListener("click", function () {
+        insight.classList.toggle("show");
+        if (insight.classList.contains("show")) {
+          insight.scrollIntoView({ behavior: "smooth" });
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
