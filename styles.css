@@ -106,10 +106,9 @@ a {
   margin-bottom: 30px;
 }
 
-.motto {
-  color: #bfa134;
-  font-weight: 500;
-}
+.motto span {
+      color: var(--gold);
+    }
 
 
 .hero-buttons button,
