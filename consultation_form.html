@@ -15,6 +15,15 @@
       margin: auto;
       padding: 40px 20px;
     }
+    .fee-note, .payment-note {
+      background-color: #fff3cd;
+      border-left: 6px solid #ffeeba;
+      padding: 15px 20px;
+      margin-bottom: 30px;
+      border-radius: 8px;
+      color: #856404;
+      font-size: 1rem;
+    }
     form {
       background: #fff;
       padding: 30px;
@@ -26,7 +35,7 @@
       margin-bottom: 6px;
       font-weight: 600;
     }
-    input, textarea, select {
+    input, textarea {
       width: 100%;
       padding: 12px;
       margin-bottom: 20px;
@@ -60,8 +69,13 @@
 <body>
   <section id="consultation">
     <h2>🗓️ Book a Legal Consultation</h2>
+
+    <div class="fee-note">
+      💳 <strong>Consultation Fee:</strong> UGX 100,000 per hour. <strong></strong> 
+    </div>
+
     <form action="https://formspree.io/f/xnnvewnd" method="POST">
-      
+
       <label for="name">Full Name</label>
       <input type="text" id="name" name="name" required placeholder="e.g. Prince P" />
 
@@ -92,10 +106,17 @@
       <textarea id="message" name="message" rows="5" required placeholder="Briefly describe your legal issue or inquiry..."></textarea>
 
       <label for="expectation">Your Expectations from this Consultation</label>
-      <textarea id="expectation" name="expectation" rows="4" required placeholder="e.g. Clarity on land ownership, legal options available, etc."></textarea>
+      <textarea id="expectation" name="expectation" rows="4" required placeholder="e.g. Evaluate if  Venture Capital is right for you, legal options available, etc."></textarea>
+
+      <div class="payment-note">
+        🧾 <strong>Payment Instructions:</strong> Kindly pay UGX 100,000 to <br>
+        <strong>Mobile Money Number:</strong> <em>+256 783501222</em><br>
+        <strong>Account Name:</strong> <em>BALUTI BWANIKA </em><br>
+        Make Payment to Secure Your Session.
+      </div>
 
       <button type="submit">🔒 Submit Request</button>
-    </form>
-  <form action="https://formspree.io/f/xnnvewnd" method="POST">
+    <form action="https://formspree.io/f/xnnvewnd" method="POST">
+  </section>
 </body>
 </html>
