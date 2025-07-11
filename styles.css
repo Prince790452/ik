@@ -212,4 +212,20 @@ form button {
 
 form button:hover {
   background: #162a4f;
+}.urgent-btn {
+  background-color: #d62828;
+  color: white;
+  padding: 12px 20px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 6px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: transform 0.2s ease, background-color 0.3s ease;
+  display: inline-block;
+  margin-top: 12px;
+}
+
+.urgent-btn:hover {
+  background-color: #a4161a;
+  transform: scale(1.05);
 }
