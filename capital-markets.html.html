@@ -2,223 +2,147 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CSL Arthur | Capital Markets Insight</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mergers & Acquisitions – Counsel Baluti Bwanika Arthur</title>
   <style>
-    html { scroll-behavior: smooth; }
     body {
-      margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background-color: #fdfdfd;
-      color: #222;
-      line-height: 1.7;
+      background-color: #f4f7fa;
+      color: #333;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      position: relative;
     }
     header {
-      background-color: #001F3F;
+      background-color: #002b45;
       color: white;
-      text-align: center;
-      padding: 2.5em 1em 2em;
-    }
-    header h1 {
-      font-size: 2.2rem;
-      margin-bottom: 0.2em;
-    }
-    header p {
-      font-style: italic;
-      font-size: 1.1rem;
-    }
-    .card {
-      max-width: 340px;
-      margin: 2em auto;
-      padding: 1.5em;
-      background-color: white;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      padding: 40px 20px;
       text-align: center;
     }
-    .icon {
-      font-size: 3rem;
-      color: #0074D9;
-    }
-    .card h3 {
-      font-size: 1.3rem;
-      color: #1f3a93;
-    }
-    .card button {
-      margin-top: 1em;
-      padding: 0.6em 1.2em;
-      background-color: #0074D9;
-      color: white;
-      border: none;
-      border-radius: 4px;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-    .card button:hover {
-      background-color: #005fa3;
-    }
-    .insight {
+    .container {
       max-width: 960px;
-      margin: 0 auto;
-      background: #ffffff;
-      border-left: 5px solid #0074D9;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-      padding: 0 1.5em;
-      max-height: 0;
-      overflow: hidden;
-      opacity: 0;
-      visibility: hidden;
-      transition: all 0.6s ease;
+      margin: auto;
+      padding: 20px;
     }
-    .insight.show {
-      opacity: 1;
-      max-height: 5000px;
-      visibility: visible;
-      padding: 2em 1.5em;
-      margin-top: 2em;
+    h2 {
+      color: #003f6b;
+      border-bottom: 2px solid #cce5ff;
+      padding-bottom: 5px;
     }
-    .insight h2 {
-      color: #003366;
-      font-size: 1.5rem;
-      margin-top: 1.2em;
+    ul, table {
+      margin: 20px 0;
     }
-    .insight h3 {
-      font-size: 1.15rem;
-      margin-bottom: 0.4em;
-      color: #004080;
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: #fff;
     }
-    .insight ul {
-      margin-left: 1.5em;
-      margin-bottom: 1.5em;
-    }
-    .insight blockquote {
-      border-left: 4px solid #0074D9;
-      padding-left: 1em;
-      color: #444;
-      font-style: italic;
-      margin: 1.5em 0;
-    }
-    .insight a {
-      color: #0074D9;
-      text-decoration: none;
-    }
-    .insight a:hover {
-      text-decoration: underline;
+    th, td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      vertical-align: top;
     }
     footer {
-      text-align: center;
-      padding: 2em 1em;
-      background: #001F3F;
+      background-color: #002b45;
       color: white;
-      font-size: 0.95rem;
+      text-align: center;
+      padding: 15px;
+      font-size: 14px;
+    }
+    .quote {
+      font-style: italic;
+      background-color: #eef5fb;
+      padding: 10px;
+      border-left: 4px solid #003f6b;
+      margin: 20px 0;
+    }
+    .top-return {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background-color: #1f3a93;
+      color: white;
+      padding: 10px 16px;
+      border-radius: 6px;
+      font-weight: 600;
+      text-decoration: none;
+      z-index: 999;
+    }
+    .top-return:hover {
+      background-color: #163172;
     }
   </style>
 </head>
 <body>
 
+  <!-- 🔙 Top-left Return Button -->
+  <a href="index.html" class="top-return">🔙 Return</a>
+
   <header>
-    <h1>CSL Arthur – Practice Areas</h1>
-    <p>Click below to explore insight on Capital Markets</p>
+    <h1>INSIGHT</h1>
+    <p><strong>MERGERS & ACQUISITIONS – 
+      STRATEGIC MERGERS & ACQUISITIONS IN A DYNAMIC REGULATORY LANDSCAPE</strong></p>
+    <p>By <strong>Counsel Baluti Bwanika Arthur</strong></p>
   </header>
 
-  <div class="card">
-    <div class="icon">💼</div>
-    <h3>Capital Markets</h3>
-    <p>Guiding businesses in securities, listings, and investor protection.</p>
-    <button id="insightBtn">Read Insight</button>
-  </div>
+  <div class="container">
+    <h2>🧠 Introduction</h2>
+    <p>M&A transactions are transformational legal events that reshape industries and economies. In Uganda, the <strong>Competition Act, 2024</strong> has introduced a new regulatory era, requiring legal precision and strategic foresight.</p>
 
-  <div class="insight" id="capital-insight">
-    <h2>📘 Capital Markets: Catalysts of Economic Transformation</h2>
-    <p><strong>By Counsel Baluti Bwanika Arthur</strong></p>
-
-    <h3>1. Introduction</h3>
-    <p>Capital markets are the arteries of modern economies. They facilitate long-term funds from savers to borrowers, enabling growth across public and private sectors.</p>
-
-    <h3>2. Historical Evolution</h3>
-    <p>Capital Markets Authority was formed in 1996, followed by the Uganda Securities Exchange in 1997—setting the legal foundation for Uganda’s capital markets journey.</p>
-
-    <h3>3. Key Structure</h3>
+    <h2>🌍 Global Legal Framework</h2>
     <ul>
-      <li><strong>Primary Market:</strong> IPOs, bond issuances</li>
-      <li><strong>Secondary Market:</strong> Investor-to-investor trading</li>
-    </ul>
-    <p><strong>Instruments:</strong> Equities, Bonds, ETFs, Green Bonds</p>
-    <p><strong>Institutions:</strong> CMA, USE, brokers, custodians</p>
-
-    <h3>4. Role in Development</h3>
-    <ul>
-      <li>📢 For Government: Infrastructure and FDI</li>
-      <li>🏢 For Corporates: Capital and transparency</li>
-      <li>💰 For Individuals: Investment returns</li>
+      <li><strong>Due Diligence:</strong> Legal, financial, and operational audits to uncover liabilities and risks.</li>
+      <li><strong>Deal Structuring:</strong> Share vs. asset purchases, mergers, and joint ventures—each with tax and liability implications.</li>
+      <li><strong>Regulatory Approvals:</strong> Competition authorities assess market impact and fairness.</li>
+      <li><strong>Contractual Documentation:</strong> SPAs, MOUs, NDAs, warranties, and indemnities define obligations and allocate risk.</li>
     </ul>
 
-    <h3>5. Why Invest?</h3>
+    <div class="quote">
+      “Even non-dominant firms may trigger review if the transaction affects sensitive sectors like telecom or banking.”
+    </div>
+
+    <h2>🇺🇬 Uganda’s Legal Framework</h2>
+    <p>Uganda’s M&A regime is shaped by general corporate law and sector-specific statutes. The <strong>Competition Act, 2024</strong> introduces mandatory notification and empowers the Ministry of Trade to assess deals.</p>
     <ul>
-      <li>📈 Long-term growth</li>
-      <li>📉 Inflation protection</li>
-      <li>📊 Diverse asset classes</li>
+      <li><strong>Companies Act, 2012:</strong> Governs amalgamations and shareholder rights.</li>
+      <li><strong>Competition Act, 2024:</strong> Requires prior notification and allows public interest considerations.</li>
+      <li><strong>Income Tax Act:</strong> Determines tax treatment of asset vs. share sales.</li>
+      <li><strong>Sectoral Laws:</strong> Financial (BoU), telecom (UCC), and energy (ERA) sectors require additional approvals.</li>
     </ul>
 
-    <blockquote>
-      “To invest in capital markets is to believe in the promise of a more equitable, prosperous Uganda.”<br>— Counsel Baluti Bwanika Arthur
-    </blockquote>
+    <h2>📚 Legal Process Overview</h2>
+    <table>
+      <tr><th>Stage</th><th>Legal Focus</th></tr>
+      <tr><td>Pre-Deal</td><td>NDAs, Letters of Intent, regulatory mapping</td></tr>
+      <tr><td>Due Diligence</td><td>Legal, tax, IP, HR, environmental audits</td></tr>
+      <tr><td>Structuring</td><td>Tax efficiency, liability allocation, financing</td></tr>
+      <tr><td>Documentation</td><td>SPAs, MOUs, warranties, indemnities</td></tr>
+      <tr><td>Regulatory Approval</td><td>Ministry of Trade, URSB, URA, sector regulators</td></tr>
+      <tr><td>Post-Merger</td><td>Integration, compliance, restructuring</td></tr>
+    </table>
 
-    <h3>6. Uganda’s Outlook</h3>
-    <p>MTN Uganda’s IPO and Collective Investment Scheme growth highlight real potential, despite challenges like low retail participation and liquidity.</p>
-
-    <h3>7. Global Trends</h3>
+    <h2>⚠️ Legal Risks & Mitigation</h2>
     <ul>
-      <li>🤖 AI in finance</li>
-      <li>🌱 ESG investing</li>
-      <li>🪙 Tokenized assets</li>
-      <li>💻 Real-time settlement</li>
+      <li><strong>Regulatory Delays:</strong> Engage early with regulators and prepare clear documentation.</li>
+      <li><strong>Hidden Liabilities:</strong> Use robust due diligence and indemnity clauses.</li>
+      <li><strong>Cultural Integration:</strong> Anticipate employment law and change management issues.</li>
     </ul>
 
-    <h3>8. Legal & Policy Path</h3>
+    <h2>🧭 Strategic Recommendations</h2>
     <ul>
-      <li>📚 Financial education in schools</li>
-      <li>⚙️ SME-friendly listing rules</li>
-      <li>🎯 Tax incentives for investors</li>
+      <li>Operationalize the Competition Act with clear timelines and guidance.</li>
+      <li>Develop M&A guidelines for sector regulators.</li>
+      <li>Promote legal-tech tools for due diligence and automation.</li>
+      <li>Encourage regional harmonization through EAC frameworks.</li>
     </ul>
 
-    <h3>9. Technology’s Role</h3>
-    <p>Fintechs, e-KYC, and mobile-first strategies can democratize capital market access across Uganda.</p>
-
-    <h3>10. Final Word</h3>
-    <p>Capital markets are not just economic tools—they are engines for national transformation.</p>
-
-    <blockquote>
-      “Capital markets are the bridge between ambition and achievement. Let us build that bridge—together.”<br>— Counsel Baluti Bwanika Arthur
-    </blockquote>
-
-    <h3>📚 References</h3>
-    <ul>
-      <li><a href="https://cmauganda.co.ug" target="_blank">Capital Markets Authority Uganda</a></li>
-      <li><a href="https://www.use.or.ug" target="_blank">Uganda Securities Exchange</a></li>
-      <li><a href="https://fsdafrica.org" target="_blank">FSD Africa</a></li>
-      <li><a href="https://www.worldbank.org" target="_blank">World Bank: Capital Market Development</a></li>
-    </ul>
+    <h2>✍️ Conclusion</h2>
+    <p>M&A is a strategic legal discipline. Uganda’s evolving framework—especially the Competition Act, 2024—offers a foundation for transparent, fair, and growth-oriented transactions. As <strong>Counsel Baluti Bwanika Arthur</strong>, I advocate for a principled, innovation-driven approach to M&A that balances ambition with legal integrity.</p>
   </div>
 
   <footer>
-    &copy; 2025 CSL Arthur | Insight authored by Counsel Baluti Bwanika Arthur
+    &copy; 2025 Counsel Baluti Bwanika Arthur. All Rights Reserved.
   </footer>
-
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const btn = document.getElementById("insightBtn");
-      const insight = document.getElementById("capital-insight");
-
-      btn.addEventListener("click", function () {
-        insight.classList.toggle("show");
-        if (insight.classList.contains("show")) {
-          insight.scrollIntoView({ behavior: "smooth" });
-        }
-      });
-    });
-  </script>
-
 </body>
 </html>
