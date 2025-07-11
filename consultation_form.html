@@ -3,34 +3,99 @@
 <head>
   <meta charset="UTF-8">
   <title>Legal Consultation</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+    section {
+      max-width: 960px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+    form {
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.07);
+    }
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 600;
+    }
+    input, textarea, select {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+    .radio-group {
+      margin-bottom: 20px;
+    }
+    .radio-group label {
+      font-weight: 500;
+    }
+    button {
+      background-color: #1f3a93;
+      color: white;
+      padding: 14px 24px;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    h2 {
+      font-size: 2rem;
+      color: #1f3a93;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+  </style>
 </head>
 <body>
-  <section id="consultation" style="max-width: 960px; margin: auto; padding: 40px 20px;">
-    <h2 style="font-size: 2rem; color: #1f3a93; text-align: center; margin-bottom: 30px;">
-      🗓️ Book a Legal Consultation
-    </h2>
-    
-    <!-- Correctly wrapped and functional form -->
-    <form action="https://formspree.io/f/xnnvewnd" method="POST" style="background: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 2px 12px rgba(0,0,0,0.05);">
-      <label for="name" style="display: block; margin-bottom: 6px; font-weight: 500;">Full Name</label>
-      <input type="text" id="name" name="name" required placeholder="e.g. Prince P" style="width: 100%; padding: 12px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 6px;" />
-
-      <label for="email" style="display: block; margin-bottom: 6px; font-weight: 500;">Email Address</label>
-      <input type="email" id="email" name="email" required placeholder="e.g. example@gmail.com" style="width: 100%; padding: 12px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 6px;" />
-
-      <label for="phone" style="display: block; margin-bottom: 6px; font-weight: 500;">Phone Number</label>
-      <input type="tel" id="phone" name="phone" required placeholder="e.g. +256 700 123456" style="width: 100%; padding: 12px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 6px;" />
-
-      <label for="date" style="display: block; margin-bottom: 6px; font-weight: 500;">Preferred Date</label>
-      <input type="date" id="date" name="date" required style="width: 100%; padding: 12px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 6px;" />
-
-      <label for="message" style="display: block; margin-bottom: 6px; font-weight: 500;">Nature of Consultation</label>
-      <textarea id="message" name="message" rows="5" required placeholder="Briefly describe your legal issue or inquiry..." style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 6px;"></textarea>
-
-      <button type="submit" style="margin-top: 20px; background-color: #1f3a93; color: white; padding: 12px 20px; border: none; border-radius: 6px; font-size: 1rem; cursor: pointer;">
-        🔒 Submit Request
-      </button>
+  <section id="consultation">
+    <h2>🗓️ Book a Legal Consultation</h2>
     <form action="https://formspree.io/f/xnnvewnd" method="POST">
-  </section>
+      
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" required placeholder="e.g. Prince P" />
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" required placeholder="e.g. example@gmail.com" />
+
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" required placeholder="e.g. +256 700 123456" />
+
+      <label for="date">Preferred Date</label>
+      <input type="date" id="date" name="date" required />
+
+      <label for="time">Preferred Time</label>
+      <input type="time" id="time" name="time" required />
+
+      <label>Preferred Meeting Location</label>
+      <div class="radio-group">
+        <input type="radio" id="office" name="location" value="My Office" required />
+        <label for="office">My Office</label><br/>
+        <input type="radio" id="other" name="location" value="Other Location" />
+        <label for="other">Other Location (Specify below)</label>
+      </div>
+
+      <label for="custom-location">If not my office, specify location</label>
+      <input type="text" id="custom-location" name="custom-location" placeholder="e.g. Kampala Serena Hotel" />
+
+      <label for="message">Nature of Consultation</label>
+      <textarea id="message" name="message" rows="5" required placeholder="Briefly describe your legal issue or inquiry..."></textarea>
+
+      <label for="expectation">Your Expectations from this Consultation</label>
+      <textarea id="expectation" name="expectation" rows="4" required placeholder="e.g. Clarity on land ownership, legal options available, etc."></textarea>
+
+      <button type="submit">🔒 Submit Request</button>
+    </form>
+  <form action="https://formspree.io/f/xnnvewnd" method="POST">
 </body>
 </html>
