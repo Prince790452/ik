@@ -64,6 +64,19 @@
       text-align: center;
       margin-bottom: 30px;
     }
+    #success-message {
+      display: none;
+      text-align: center;
+      padding: 30px;
+      background: #e9fbe9;
+      border-left: 6px solid #90ee90;
+      border-radius: 10px;
+      margin-top: 40px;
+    }
+    #success-message h3 {
+      color: #2e7d32;
+      font-size: 1.5rem;
+    }
   </style>
 </head>
 <body>
@@ -71,11 +84,10 @@
     <h2>🗓️ Book a Legal Consultation</h2>
 
     <div class="fee-note">
-      💳 <strong>Consultation Fee:</strong> UGX 100,000 per hour. <strong></strong> 
+      💳 <strong>Consultation Fee:</strong> UGX 100,000 per hour.
     </div>
 
     <form action="https://formspree.io/f/xnnvewnd" method="POST">
-
       <label for="name">Full Name</label>
       <input type="text" id="name" name="name" required placeholder="e.g. Prince P" />
 
@@ -106,17 +118,44 @@
       <textarea id="message" name="message" rows="5" required placeholder="Briefly describe your legal issue or inquiry..."></textarea>
 
       <label for="expectation">Your Expectations from this Consultation</label>
-      <textarea id="expectation" name="expectation" rows="4" required placeholder="e.g. Evaluate if  Venture Capital is right for you, legal options available, etc."></textarea>
+      <textarea id="expectation" name="expectation" rows="4" required placeholder="e.g. Evaluate if Venture Capital is right for you, legal options available, etc."></textarea>
 
       <div class="payment-note">
         🧾 <strong>Payment Instructions:</strong> Kindly pay UGX 100,000 to <br>
         <strong>Mobile Money Number:</strong> <em>+256 783501222</em><br>
-        <strong>Account Name:</strong> <em>BALUTI BWANIKA </em><br>
+        <strong>Account Name:</strong> <em>BALUTI BWANIKA</em><br>
         Make Payment to Secure Your Session.
       </div>
 
       <button type="submit">🔒 Submit Request</button>
     <form action="https://formspree.io/f/xnnvewnd" method="POST">
+
+    <div id="success-message">
+      <h3>✅ Your request has been submitted successfully!</h3>
+      <p>Thank you for reaching out. We will contact you shortly.</p>
+      <button onclick="window.location.href='index.html'">🔙 Return to Home</button>
+    </div>
   </section>
+
+  <script>
+    const form = document.querySelector("form");
+    const successMessage = document.getElementById("success-message");
+
+    form.addEventListener("submit", function(event) {
+      event.preventDefault();
+      fetch(form.action, {
+        method: form.method,
+        body: new FormData(form),
+        headers: {
+          'Accept': 'application/json'
+        }
+      }).then(() => {
+        form.style.display = "none";
+        successMessage.style.display = "block";
+      }).catch(error => {
+        alert("Oops! Something went wrong. Please try again.");
+      });
+    });
+  </script>
 </body>
 </html>
